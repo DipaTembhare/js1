@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+   margin: 0;
+   padding: 0;
+   background-color: black;
+   color: white;
+ }
+ a:hover{
+  color: red;
+  text-decoration: underline;
+ }
+</style>
+<body>
+  <div class="main"></div>  
+<script>
+
+const main = document.querySelector('.main');
+
+    //creating navbar
+    const navbar = document.createElement('div');
+    navbar.setAttribute('id','nav');
+    navbar.style.height = '10vh';
+    navbar.style.width  = '100%';
+    navbar.style.display = 'flex';
+    navbar.style.justifyContent = 'spaceBetween';
+    // navbar.style.backgroundColor = 'red';
+    main.appendChild(navbar);
+
+    //creating leftnav part
+    const leftNav = document.createElement('div');
+    leftNav.style.display = 'flex';
+    leftNav.style.width = '30%';
+    leftNav.style.height = '100%';
+    // leftNav.style.backgroundColor = 'green';
+    navbar.append(leftNav);
+
+    const contain = document.createElement('h1');
+    contain.innerHTML = 'Portfolio.';
+    contain.style.fontSize = '40px';
+    contain.style.alignItems = 'center';
+    
+    contain.style.padding = '3% 3vh 8% 15%';
+    leftNav.append(contain);
+    
+
+    //  const contain1 = document.createElement('a');
+    //  contain1.innerHTML = 'About';
+    //  contain1.innerHTML = 'Home';
+    //  contain1.innerHTML = 'Service';
+    //  contain1.innerHTML = 'Content';
+    //  navbar.append(contain1);
+     
+
+
+    // creating rightnav part
+
+    const rightnav = document.createElement('div');
+    rightnav.style.width = '70%';
+    rightnav.style.height = '100%';
+    rightnav.style.alignItems = 'center';
+    rightnav.style.display = 'flex';
+    rightnav.style.justifyContent = 'space-between';
+    rightnav.style.margin = '0 40px';
+    rightnav.style.fontSize = '20px';
+
+    // rightnav.style.backgroundColor = 'red';
+    navbar.appendChild(rightnav);
+
+    const contain1 = document.createElement('a');
+     contain1.innerHTML = 'Home';
+     const contain2 = document.createElement('a');
+     contain2.innerHTML = 'About';
+     const contain3 = document.createElement('a');
+     contain3.innerHTML = 'Service';
+     const contain4 = document.createElement('a');
+     contain4.innerHTML = 'Contact';
+     const contain5 = document.createElement('a');
+     contain5.innerHTML = 'Log-In';
+     const contain6 = document.createElement('a');
+     contain6.innerHTML = 'Register';
+     rightnav.append(contain1,contain2,contain3,contain4,contain5,contain6);
+
+     
+    // creating bodypart
+    const bodypart = document.createElement('div');
+   bodypart.style.height = '90vh';
+   bodypart.style.width = '100%';
+   bodypart.style.display = 'flex';
+  //  bodypart.style.backgroundColor = 'black';
+   main.appendChild(bodypart);
+
+  //  creating left bodypart
+  const leftpart = document.createElement('div');
+  leftpart.style.height = '100%';
+  leftpart.style.width = '50%';
+  // leftpart.style.backgroundColor = 'black';
+  // leftpart.style.padding = '0 .5% 0 1%';
+  leftpart.style.padding = '0 .3% 0 1%';
+  // leftPart.style.padding = '20vh 5% 5vh 3%';
+  bodypart.appendChild(leftpart);
+
+
+  const h1 = document.createElement('h1');
+  h1.innerHTML = "Hello, It's Me CoderGirl.";
+  h1.style.fontSize = '80px';
+  h1.style.marginTop = '80px';
+  // leftpart.append(h1);
+
+  const p = document.createElement('p');
+  p.innerHTML = "I'm A Web Developer & Designer. I Will Make Your Project Beautiful And Attractive, You Can Find Me On GitHub.";
+  p.style.fontSize = '20px';
+  p.style.letterSpacing = '1px'
+  p.style.padding = ' 40px 0 30px';
+  // p.style.margin = '.001%';
+  // leftpart.append(p);
+
+  const button = document.createElement('button');
+  button.style.width = '13%';
+  button.style.height = '7%';
+  button.style.fontSize = '20px';
+  button.style.backgroundColor = 'red';
+  button.style.borderRadius = '10%';
+  button.style.border = '2px solid black';
+  // button.style.hover = 'cursor: pointer';
+  button.innerHTML = 'Hire Me';
+  // leftpart.append(button);
+
+
+  leftpart.append(h1,p,button);
+
+  const btn = document.querySelector('#button');
+  button.addEventListener('click',() => {
+    // button.style.backgroundColor = 'green';
+    const r = Math.floor (Math.random() * 236);
+       const g = Math.floor (Math.random() * 236);
+       const b = Math.floor (Math.random() * 236);
+       button.style.backgroundColor = "rgb(" + r +"," + g +"," + b +")";
+       button.style.color = 'black';
+
+
+  })
+
+
+  //  creating right bodypart
+  const rightPart = document.createElement('div');
+  rightPart.style.height = '100%';
+  rightPart.style.width = '50%';
+  // rightPart.style.backgroundColor = 'yellow';
+  bodypart.appendChild(rightPart);
+
+const image = document.createElement('img');
+image.setAttribute('src','https://codefirstgirls.com/wp-content/uploads/2021/05/CFG-Members-Courtney-1024x1024.png');
+image.style.height = '99.10%';
+image.style.width = '100%';
+image.style.backgroundSize = 'cover';
+image.style.overflow = 'hidden'
+// image.style.bottom = '1%';
+// // image.style.margin = '10% 0 0 10%';
+// // image.style.margin = '10% 10% 0 20%';
+rightPart.appendChild(image);
+
+</script>
+
+</body>
+</html>
